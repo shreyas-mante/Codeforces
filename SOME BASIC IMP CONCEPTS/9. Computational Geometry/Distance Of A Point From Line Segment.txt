@@ -1,0 +1,26 @@
+Computational Geometry:
+
+
+Distance of a Point from Line Segment :
+	
+	
+		C	 (OR)     C		(OR)	C(x,y)		
+		 \          |    			/	
+		  \			|			   / 
+		   \		|			  /
+			\		|   		 /
+     A(x1,y1)\__ __ |__ __ __ __/ B(x2,y2)
+   
+Calculate Distance of C from Line Segment AB.
+
+
+*Solution:
+	
+Case 1.) AB.AC (Dot Product) = if(answer is -ve) then find length of AC.
+
+Case 2.) AB.BC (Dot Product) = if(answer is +ve) then find length of BC.
+
+Case 3.) If both conditions fail then [ |(AB X AC)| / |AB| ] and this is the answer.
+
+
+

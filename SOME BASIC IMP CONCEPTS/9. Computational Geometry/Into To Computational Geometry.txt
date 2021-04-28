@@ -1,0 +1,54 @@
+Computational Geometry :
+
+	
+1.) Dot Product = 
+
+	*Formula: 
+		if A(x1,x2) & B(y1,y2)
+		then , 
+		
+	A.B = | (x1*y1) + (x2*y2) |;
+	
+	
+//////////////////////////////////////
+	
+	
+	
+2.) Cross Product = 
+
+	*Formula:
+		if A(x1,x2) 
+		   B(y1,y2)
+		then ,
+		
+	A X B = | (x1*y2) - (x2*y1) |;
+	
+/////////////////////////////////////
+
+
+
+3.) Area of ||gm  = 
+
+	Cross-Product of AB & BC 
+			OR 
+		( |AB X BC| )
+		
+
+		
+/////////////////////////////////////
+
+
+
+4.) Area of Triangle = 
+
+	Cross-Product of AB & BC / 2
+				OR
+			(|AB X BC|)/2
+	
+
+
+
+		
+	
+		
+		   

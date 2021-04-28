@@ -1,0 +1,8 @@
+AdHoc Problems : Apply own Logic , No DS&Algo needed.
+
+Problems are all about:	
+1. Determine Minimum Cost
+2. Determine Minimum Swaps
+
+
+

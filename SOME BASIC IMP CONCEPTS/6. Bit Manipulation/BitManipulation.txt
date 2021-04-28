@@ -1,0 +1,27 @@
+Bit Manipulation
+
+1.) Left Shift Operators =
+				
+				
+	* For ex: 
+		8<<1 = 16;
+		11<<2 = 44;
+		
+	* Syntax:
+		Number << i = Number*2^i;
+		
+////////////////////////////////
+
+
+2.) Right Shift Operators = 
+
+		
+	* For ex:
+		8>>1 = 4;
+		11>>1 = 5;
+		
+	*Syntax:
+		Number >> i = floor( (Number/(2^i) )   
+		
+////////////////////////////////
+							

@@ -1,0 +1,4 @@
+Bitwise Operator:
+	
+1.) To set a bit we use ( | OR).
+2.) to unset a bit we use (& And) and (~).
