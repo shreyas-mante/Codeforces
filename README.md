@@ -1,7 +1,2 @@
 "# Codeforces" 
-"# Codeforces" 
-"# Codeforces" 
-"# Codeforces" 
-"# Codeforces" 
-"# Codeforces" 
-"# Codeforces" 
+
