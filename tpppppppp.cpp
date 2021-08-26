@@ -46,7 +46,45 @@ signed main()
 	imback;
 	nuke
 	{
-
+		ll n;
+		cin>>n;
+		vector<ll>v(n);
+		for(ll i=0;i<n;i++)
+		{
+			cin>>v[i];
+		}
+		vector<ll>sorted(v);
+		sort(sorted.begin(),sorted.end());
+		vector<ll>v2;
+		for(ll i=0;i<n;i++)
+		{
+			if(v.size()%2 == 0)
+			{
+				ll a = sorted[(v.size()-2)/2];
+				ll b = sorted[v.size()/2];
+				
+			}
+			else
+			{
+				ll a = sorted[(v.size()-1)/2];
+				if(sorted[(v.size()-1)/2] == v[i])
+				{
+					v2.push_back(v.size());
+				} 
+				else
+				{
+					v2.push_back(1);	
+				} 
+			}
+			
+		}
+		
+		for(ll i=0;i<v2.size();i++)
+		{
+			cout<<v2[i]<<" ";
+		}
+		cout<<endl;
+		
 	}
 }
 

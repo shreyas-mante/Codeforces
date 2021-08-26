@@ -1,0 +1,27 @@
+class filetest {
+file { '/tmp/sysctl.conf':
+  ensure  => present,
+  owner   => 'root',
+  group   => 'root',
+  mode    => '0777',
+  source  => 'puppet:///modules/filetest/sysctl.conf',
+   }
+}
+
+
+
+file { 'E:\mycopy\folder\filename':
+          ensure => present,
+          source => "d:\temp\test.txt",
+}
+
+file { '/tmp/hello.txt':
+  ensure  => file,
+  content => "hello, world\n",
+}
+
+file { 'hellopuppet.txt':
+        ensure => file , 
+        content => "Hello Puppet",
+		                                                                                                       content => "Hello Puppet",
+}

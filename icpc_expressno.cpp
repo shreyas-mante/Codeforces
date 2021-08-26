@@ -46,7 +46,47 @@ signed main()
 	imback;
 	nuke
 	{
+		ll n,x;
+		cin>>n>>x;
+		ll res = 0;
 
+		if(x == 0 && n%2!=0)
+		{
+			res = -1;
+			goto a;
+		}
+		while(n > x)
+		{
+			ll fg = 1;
+			for(ll i=31;i>0;i--)
+			{
+				if((1<<i) & n)
+				{
+					if(!(i&1))
+					{
+						n -= (1<<(i-1));
+						res++;
+					}
+					else
+					{
+						n -=(1<<i);
+						res++;
+					}
+					break;
+				}
+			}
+		}
+		
+		if(x == 0 && n == 1)
+		{
+			res = -1;
+		}
+		else if(n > 0)
+		{
+			res++;
+		}
+		a:
+		cout<<res<<endl;
 	}
 }
 

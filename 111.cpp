@@ -41,13 +41,21 @@ void facto() {
 
 /*/-----------------------------NUKE BEGINS-------------------------------/*/
 
-signed main()
+int main()
 {
-	imback;
-	nuke
-	{
+	
 
-	}
+
+    short i = 1; 
+//    char s; 
+    char *s = 0000000000000000; 
+    char *x; 
+    x = &s; 
+    strncpy(x, s, sizeof(x)); 
+    printf( "i = %d" , i); 
+    return 1; 
+
+
 }
 
 

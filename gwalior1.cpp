@@ -46,7 +46,41 @@ signed main()
 	imback;
 	nuke
 	{
-
+		ll n,k;
+		cin>>n>>k;
+		string s;
+		cin>>s;
+		ll i = 0;
+		ll j = k;
+		ll fg = 0;
+		while(i<n && j<n)
+		{
+			if(s[j] == '#')
+			{
+				i++;
+				if(i<n)
+				{
+					s[j] = '.';
+				}
+			}
+			else
+			{
+				i++;
+				j++;
+			}
+			
+			if(i == j)
+			{
+				fg = 1;
+				cout<<"JEFF"<<endl;
+				break;
+			}
+		}
+		
+		if(fg == 0)
+		{
+			cout<<"JAY"<<endl;
+		}
 	}
 }
 

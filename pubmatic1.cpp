@@ -41,13 +41,49 @@ void facto() {
 
 /*/-----------------------------NUKE BEGINS-------------------------------/*/
 
+
+int balancedSum(vector<ll> arr)
+{
+	ll Lmax[arr.size()];
+	ll Rmax[arr.size()];
+	
+	Lmax[0] = arr[0];
+	for(ll i=1;i<arr.size();i++)
+	{
+		Lmax[i] = max(arr[i] , Lmax[i-1]+arr[i]);
+	}
+	
+	Rmax[arr.size()-1] = arr[arr.size()-1];
+	for(ll i=arr.size()-2;i>=0;i--)
+	{
+		Rmax[i] = max(arr[i] , Rmax[i+1]+arr[i]);	
+	} 
+	int ans = 0;
+	for(ll i=0;i<arr.size();i++)
+	{
+		if(Rmax[i] == Lmax[i])
+		{
+			ans = i;
+			break;
+		}
+	}
+	
+	return ans;
+}
+
+
 signed main()
 {
-	imback;
-	nuke
+	ll n;
+	cin>>n;
+	vector<ll>v(n);
+	
+	for(ll i=0;i<n;i++)
 	{
-
+		cin>>v[i];
 	}
+	
+	cout<<balancedSum(v)<<endl;
 }
 
 

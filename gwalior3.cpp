@@ -46,7 +46,39 @@ signed main()
 	imback;
 	nuke
 	{
-
+		ll n,q;
+		cin>>n>>q;
+		vector<ll>v(n);
+		multiset<ll>dif;
+		for(ll i=0;i<n;i++)
+		{
+			cin>>v[i];
+		}
+		
+		for(int i=1;i<n;i++)
+		{
+			dif.insert(abs(v[i]-v[i-1]));
+		}
+		
+		for(ll i=0;i<q;i++)
+		{
+			ll k,p;
+			cin>>k>>p;
+			k--;
+			
+			if(k > 0)
+			{
+				dif.erase(dif.find(abs(v[k]-v[k-1])));
+				dif.insert(abs(p-v[k-1]));
+			}
+			if(k+1 < n)
+			{
+				dif.erase(dif.find(abs(v[k]-v[k+1])));
+				dif.insert(abs(p-v[k+1]));
+			}
+			v[k] = p;
+			cout<<(*dif.begin())<<endl;
+		}
 	}
 }
 

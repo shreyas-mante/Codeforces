@@ -46,7 +46,44 @@ signed main()
 	imback;
 	nuke
 	{
-
+		ll n,p;
+		cin>>n>>p;
+		
+		vector<ll>arr(n);
+		
+		for(ll i=0;i<n;i++)
+		{
+			cin>>arr[i];
+		}
+		vector<ll>arr33(arr);
+		set<pair<ll,ll> >arr1[p+1];
+		for(ll i=1;i<=p;i++)
+		{
+			ll u,v;
+			cin>>u>>v;
+			arr1[u].insert({v,arr[v-1]});
+			arr1[v].insert({u,arr[u-1]});
+			arr[v-1] = 0;
+			arr[u-1] = 0;
+		}
+		vector<pair<ll,ll> >arr2[p+1];
+		for(ll i=1;i<=p;i++)
+		{
+			ll u,v;
+			cin>>u>>v;
+			arr2[u].push_back({v,arr33[v-1]});
+			arr2[v].push_back({u,arr33[u-1]});
+			arr33[v-1] = 0;
+			arr33[u-1] = 0;
+		}
+		
+		
+		for(ll i=0;i<p;i++)
+		{
+			
+		}
+		
+		
 	}
 }
 

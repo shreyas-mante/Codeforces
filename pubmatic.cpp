@@ -44,10 +44,33 @@ void facto() {
 signed main()
 {
 	imback;
-	nuke
+	ll n;
+	cin>>n;
+	vector<ll>arr(n);
+	for(ll i=0;i<n;i++)
 	{
-
+		cin>>arr[i];
 	}
+	
+	ll cnt = 0;
+	for(ll i=0;i<n-1;i++)
+	{
+		if(arr[i] > arr[i+1])
+		{
+			cnt++;
+		}
+	}
+	int ans = 0;
+	if(cnt >= 2)
+	{
+		ans = cnt- 1;
+	}
+	else if(cnt == 0 || cnt == 1)
+	{
+		ans = 0;
+	}
+	
+	return ans;
 }
 
 

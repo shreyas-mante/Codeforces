@@ -41,13 +41,38 @@ void facto() {
 
 /*/-----------------------------NUKE BEGINS-------------------------------/*/
 
-signed main()
+int main()
 {
-	imback;
-	nuke
+	ll n;
+	cin>>n;
+	ll arr[n];
+	ll k;
+	cin>>k;
+	
+	for(ll i=0;i<n;i++)
 	{
-
+		cin>>arr[i];
 	}
+	vector<ll>v1;
+	for(ll i=0;i<n;i++)
+	{
+		if(i+k < n)
+		{
+			ll ans = *min_element(arr+i,arr+i+k);
+			v1.push_back(ans);
+		}
+		else
+		{
+			ll ans = *min_element(arr+i,arr+n);
+			v1.push_back(ans);
+		}
+		
+	}
+	
+	ll ans = *max_element(v1.begin(),v1.end());
+	cout<<ans<<endl;
+	
+	
 }
 
 

@@ -41,13 +41,69 @@ void facto() {
 
 /*/-----------------------------NUKE BEGINS-------------------------------/*/
 
+
+ll dp[1000][1000];
+vector<vector<int>> combinationSum(vector<int>& candidates, int target) 
+{
+  vector<vector<vector<int>>> dp(target + 1);
+
+  for (int c : candidates) {
+    for (int i = c; i <= target; i++) {
+      if (i == c) {
+        dp[i].push_back({c});
+      } else {
+        for (vector<int> blist : dp[i - c]) {
+          blist.push_back({c});
+          dp[i].push_back(blist);
+        }
+      }
+    }
+  }
+
+  return dp[target];
+}
+
+ll ways(ll sum , ll k)
+{
+	
+	if(k > sum)
+	{
+		return 0;
+	}
+	
+	if(k == 0)
+	{
+		if(sum == 0)
+		{
+			return 1;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	
+	if(dp[sum][k] == -1)
+	{
+		return dp[sum][k];
+	}
+
+	if(k <= sum)
+	{
+		return dp[sum][k] = ways(sum-k,k) + ways(sum-1,k-1);
+	}
+	
+}
+
 signed main()
 {
-	imback;
-	nuke
+	vector<int>candidates;
+	int target=2;
+	for(int i=1;i<=8;i++)
 	{
-
+		candidates.push_back(i);
 	}
+	cout<<combinationSum(candidates,2);
 }
 
 

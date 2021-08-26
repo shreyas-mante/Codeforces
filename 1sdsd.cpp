@@ -44,10 +44,11 @@ void facto() {
 signed main()
 {
 	imback;
-	nuke
-	{
-
-	}
+//	nuke
+//	{
+		int c=- -2;
+		cout<<c<<endl;
+//	}
 }
 
 

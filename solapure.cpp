@@ -46,7 +46,47 @@ signed main()
 	imback;
 	nuke
 	{
-
+		ll n;
+		cin>>n;
+		vector<ll>v1(n);
+		vector< pair<ll,ll>>v;
+		
+		for(ll i=0;i<n;i++)
+		{
+			cin>>v1[i];
+		}
+		
+		for(ll i=0;i<n;i++)
+		{
+			v.push_back({v1[i],i});
+		}
+		
+		sort(v.begin(),v.end());
+		map<ll,ll>mp;
+		vector<ll> res(n,-1);
+		for(ll i=0;i<n;i++)
+		{
+			ll in = v[i].second;
+			ll mn = min(i , n-1-i);
+			
+			if(mp.count(v[i].first))
+			{
+				mp[v[i].first] = max(mp[v[i].first] , 2*mn + 1);
+			}
+			else
+			{
+				mp[v[i].first] = 2*mn +1;
+			}
+			
+			res[in] = 2*mn+1;
+		}
+		
+		for(ll i=0;i<n;i++)
+		{
+			cout<<mp[v1[i]]<<" ";
+		}
+		cout<<endl;
+		
 	}
 }
 
